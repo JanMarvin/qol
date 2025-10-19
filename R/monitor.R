@@ -206,7 +206,7 @@ monitor_plot <- function(monitor_df, by = "section", draw_plot = TRUE){
 
     # Set up axis
     graphics::axis(side   = 1,                  # x-Axis
-                   at     = 1:nrow(monitor_df), # How many ticks are shown
+                   at     = seq_len(nrow(monitor_df)), # How many ticks are shown
                    labels = monitor_df[[by]])   # Labels
     graphics::axis(side   = 2)                  # Show y-Axis as stated in plot
 

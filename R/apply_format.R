@@ -108,7 +108,7 @@ apply_format <- function(data_frame, formats, group_vars = NULL){
 
             # If not all values are represented in the format container, check where there are gaps
             # and fill them at the affected positions
-            na_positions <- positions <- which(is.na(temp_data[["label"]]) & !is.na(temp_data[[current_var]]))
+            na_positions <- which(is.na(temp_data[["label"]]) & !is.na(temp_data[[current_var]]))
             if (length(na_positions) > 0){
                 temp_data[["label"]][na_positions] <- temp_data[[current_var]][na_positions]
             }
